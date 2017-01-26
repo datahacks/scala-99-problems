@@ -10,6 +10,11 @@ package ninetynine
   * res0: Int = 8
   **/
 object PO1 {
+   def main(args: Array[String]): Unit = {
+     val xs = List(1,2,3,4,5)
+     println(lastRecursive(xs))
+ }
+  
   // Using builtin function
   def lastBuiltin[A](list: List[A]): A = list.last
   
@@ -19,10 +24,11 @@ object PO1 {
   // Using recursive and pat match
   def lastRecursive[A](list: List[A]): A = list match {
     case h :: Nil => h
-    case _ :: tail => lastRecursive(tail)
+    case _ :: tai => lastRecursive(tai)
     case _ => throw new NoSuchElementException  
   }
   
+
 }
 
 /**
