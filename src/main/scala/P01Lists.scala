@@ -1,15 +1,12 @@
-package ninetynine
-
-/* This file contains solutions for List related Scala 99 problems */
-
-
  /**	
   * P01 (*) Find the last element of a list
   * Example:
   * scala> last(List(1, 1, 2, 3, 5, 8)
   * res0: Int = 8
   **/
-object PO1 {
+
+object P01 {
+  
    def main(args: Array[String]): Unit = {
      val xs = List(1,2,3,4,5)
      println(lastRecursive(xs))
@@ -29,22 +26,4 @@ object PO1 {
   }
   
 
-}
-
-/**
- * P02 (*) Find the last but one element of a list.
- * Example:
- * scala> penultimate(List(1, 1, 2, 3, 5, 8))
- * res0: Int = 5
- */
-object P02 {
-  
-  def penultimateBuiltin[T](list: List[T]): T = list.init.last
-  
-  def penultimateRecursive[T](list: List[T]): T = list match {
-    case h :: _ :: Nil => h
-    case _ :: tail     => penultimateRecursive(tail)
-    case _             => throw new NoSuchElementException
-  }
-  
 }
