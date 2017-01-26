@@ -11,6 +11,7 @@ object P02 {
     println("penultimate Builtin: " +penultimateBuiltin(xs))
     println("penultimate Recursive: " +penultimateRecursive(xs))
     println("penultimate Length: " +penultimateLength(xs))
+    println("Last 5th Element using builtin: " +lastNthBuilitin(5,xs))
     
   }
   
@@ -24,4 +25,8 @@ object P02 {
   
   def penultimateLength[T](list: List[T]): T = 
     list(list.length - 2)
+ 
+  def lastNthBuilitin[T](n: Int,list: List[T]): T = {
+    list.takeRight(n).head
+  }
 }
