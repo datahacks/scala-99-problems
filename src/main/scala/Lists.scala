@@ -31,3 +31,14 @@ object PO1 {
  * scala> penultimate(List(1, 1, 2, 3, 5, 8))
  * res0: Int = 5
  */
+object P02 {
+  
+  def penultimateBuiltin[T](list: List[T]): T = list.init.last
+  
+  def penultimateRecursive[T](list: List[T]): T = list match {
+    case h :: _ :: Nil => h
+    case _ :: tail     => penultimateRecursive(tail)
+    case _             => throw new NoSuchElementException
+  }
+  
+}
