@@ -17,3 +17,5 @@ target/
 target*
 .settings
 out/*
+.cache-main
+.cache-tests
