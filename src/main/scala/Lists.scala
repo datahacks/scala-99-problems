@@ -1,4 +1,4 @@
-
+package ninetynine
 
 /* This file contains solutions for List related Scala 99 problems */
 
