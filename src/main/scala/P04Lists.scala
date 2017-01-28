@@ -10,7 +10,9 @@ object P04 {
   
   def main(args: Array[String]): Unit = {
       val xs = List(1,2,3,4,5,6,7,8,9,10)
+      val ys = List(1, 1, 2, 3, 5, 8)
       println(lengthTailRecursive(xs))
+      println(lengthBuiltin(ys))
   }
   
   def lengthTailRecursive[T](list: List[T]) = {
@@ -20,4 +22,7 @@ object P04 {
     }
     accum(0, list)
   }
+  
+  def lengthBuiltin[T](list: List[T]) = list.length
+   
 }
