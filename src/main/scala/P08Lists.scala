@@ -12,7 +12,9 @@ object P08 {
   
   def main(args: Array[String]) = {
     val ts = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    val gs = Nil
     println(compressTailRecursive(ts))
+    println(compressRecursive(ts))
   }
   
   def compressTailRecursive[T](list: List[T]) = {
@@ -23,5 +25,9 @@ object P08 {
     accum(Nil,list)
   }
   
+  def compressRecursive[T](list: List[T]): List[T] = list match {
+    case h :: tail => h :: compressRecursive(tail.dropWhile(_ == h) )
+    case Nil => Nil
+  }
   
 }
