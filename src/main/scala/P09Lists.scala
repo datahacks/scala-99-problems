@@ -9,7 +9,7 @@
  *  
  */
 
-object P09 {
+object P09Lists {
   
   def main(args: Array[String]) = {
     val ls = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)

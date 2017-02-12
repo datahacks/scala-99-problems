@@ -6,7 +6,7 @@
  * res0: List[Int] = List(8, 5, 3, 2, 1, 1)
  */
 
-object P05 {
+object P05Lists {
   
   def main(args: Array[String]): Unit = {
     val xs = List("abc", "def", "ghi")

@@ -6,7 +6,7 @@
  * res0: Boolean = true
  */
 
-object P06 {
+object P06Lists {
   
   def main(args: Array[String]): Unit = {
     val xs = List(1,2,3,2,1)

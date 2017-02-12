@@ -5,7 +5,7 @@
   * res0: Int = 8
   **/
 
-object P01 {
+object P01Lists {
   
    def main(args: Array[String]): Unit = {
      val xs = List(1,2,3,4,5)

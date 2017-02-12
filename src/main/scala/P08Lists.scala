@@ -8,7 +8,7 @@
  *  
  */
 
-object P08 {
+object P08Lists {
   
   def main(args: Array[String]) = {
     val ts = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)

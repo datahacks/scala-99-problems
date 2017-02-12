@@ -6,7 +6,7 @@
  * res0: List[Any] = List(1, 1, 2, 3, 5, 8)
  */
 
-object P07 {
+object P07Lists {
   def main(args: Array[String]) = {
     val xs = List(List(1, 1), 2, List(3, List(5, 8)))
     println(flatten(xs))
