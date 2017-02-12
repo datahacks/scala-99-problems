@@ -13,17 +13,21 @@ object P09 {
   
   def main(args: Array[String]) = {
     val ls = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    val ns = List()
     println(pack(ls))
+    // TODO Not handling empty list input
+    //println(pack(ns))
   }
   
   def pack(list: List[Symbol]): List[List[Symbol]] = {
     
     def accum(result: List[List[Symbol]], prev: Symbol, xs: List[Symbol]): List[List[Symbol]] = xs match {
-      case Nil => result
-      case h:: tail if h == prev => accum((h :: result.head) :: result, h, tail)
+      case Nil => result.reverse
+      case h:: tail if h == prev => accum((h :: result.head) :: result.tail, h, tail)
       case h:: tail => accum(List(h) :: result, h, tail)
     }
     accum(List(List(list.head)), list.head, list.tail)
+    
   }
 
   
