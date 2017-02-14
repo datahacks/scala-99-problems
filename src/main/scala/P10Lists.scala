@@ -13,15 +13,13 @@
 object P10Lists {
   def main(args: Array[String]) = {
     val ls = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
-    //println(encode(ls))
+    println(encode(ls))
   }
   
-  // TODO Not working
-  def encode(list: List[Symbol]) = {
-    val xs = List()
-    P09Lists.pack(list).foreach { x => (x.length, x.head) ::xs }
-    println(xs)
-    
+  def encode(list: List[Symbol]):List[(Int,Symbol)] = {
+    var xs = List[(Int,Symbol)]()
+    P09Lists.pack(list).foreach { l => xs = (l.length,l.head) :: xs }
+    return xs.reverse
   }
   
 }
