@@ -12,4 +12,12 @@
 
 object P11Lists {
   
+  def main(args: Array[String]) = {
+    val input = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    println(encodeModified(input))
+  }
+  
+  def encodeModified(list: List[Symbol])= 
+    P10Lists.encode(list).map{t => if (t._1 == 1) t._2 else t }
+  
 }
