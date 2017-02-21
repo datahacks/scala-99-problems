@@ -10,7 +10,7 @@ object P15Lists {
   
   def main(args: Array[String]): Unit = {
     val ls = List('a, 'b, 'c, 'c, 'd)
-    println(duplicateN(3, ls))
+    println(duplicateN(3,ls))
   }
   
   def duplicateN(n: Int, list: List[Symbol] ) = {
