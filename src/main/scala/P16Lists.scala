@@ -25,3 +25,5 @@ object P16Lists {
     
   }
 }
+
+// used zipWithIndex, tuple2, pattern matching
