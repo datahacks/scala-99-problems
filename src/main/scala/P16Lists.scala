@@ -13,6 +13,7 @@ object P16Lists {
     println(drop(3, ls))
   }
   
+  // using zipWithIndex, tuple2, pattern matching
   def drop(n: Int, list: List[Symbol]) = {
     
     def accum(result: List[Symbol], xs: List[(Symbol, Int)], i: Int): List[Symbol] = xs match {
@@ -24,6 +25,7 @@ object P16Lists {
    accum(List(), list.zipWithIndex, n)
     
   }
+  
+  // also can use filter with zipWithIndex to get more concise solution
 }
 
-// used zipWithIndex, tuple2, pattern matching
