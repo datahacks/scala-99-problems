@@ -20,4 +20,5 @@ object P17Lists {
   // using builtin splitAt
   def splitBuiltIn(n: Int, list: List[Symbol]) = list.splitAt(n)
   
+  //TODO try recursive option instead of using splitAt
 }
