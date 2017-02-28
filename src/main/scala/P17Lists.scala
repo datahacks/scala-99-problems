@@ -17,6 +17,7 @@ object P17Lists {
     println(splitBuiltIn(3,ls))
   }
   
+  // using builtin splitAt
   def splitBuiltIn(n: Int, list: List[Symbol]) = list.splitAt(n)
   
 }
