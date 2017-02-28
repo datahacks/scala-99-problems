@@ -12,4 +12,11 @@
 
 object P17Lists {
   
+  def main(args: Array[String]): Unit = {
+    val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
+    println(splitBuiltIn(3,ls))
+  }
+  
+  def splitBuiltIn(n: Int, list: List[Symbol]) = list.splitAt(n)
+  
 }
