@@ -11,4 +11,21 @@
 
 object P18Lists {
   
+  def main(args: Array[String]) = {
+    val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
+    println(slice(3, 7, ls))
+  }
+  
+  // slice using recursive and zipWithIndex
+  def slice(i: Int, k: Int, list: List[Symbol] ) = {
+    
+    def accum(result: List[Symbol], xs: List[(Symbol, Int)] ): List[Symbol] = xs match {
+      case Nil => result.reverse  
+      case h:: tail if (h._2 >= i && h._2 < k ) => accum(h._1:: result, tail)
+      case h:: tail => accum(result, tail)
+    }
+    
+    accum(List(), list.zipWithIndex)
+    
+  }
 }
