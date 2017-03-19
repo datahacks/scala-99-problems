@@ -14,7 +14,7 @@ object P15Lists {
   }
   
   def duplicateN(n: Int, list: List[Symbol] ) = {
-    
+   // TODO this will not handle if n = 0 is given as argument 
     def accum(i: Int, sym: Symbol, result: List[Symbol]): List[Symbol] = i match {
       case i if i == 0 => result
       case i  => accum(i - 1, sym, sym:: result) 
