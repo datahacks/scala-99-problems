@@ -17,6 +17,7 @@ object P19Lists {
     val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
     println(rotate(3,ls))
     println(rotate(-2,ls))
+    println(rotate(0,ls))
   }
   
   // using P17 split and built-in reverse
