@@ -11,4 +11,6 @@
 
 object P19Lists {
   
+  def rotate(i: Int, list: List[Symbol]) = ???
+  
 }
