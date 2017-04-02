@@ -9,8 +9,24 @@
  * res1: List[Symbol] = List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i)
  */
 
+
+
 object P19Lists {
   
-  def rotate(i: Int, list: List[Symbol]) = ???
+  def main(args: Array[String]): Unit = {
+    val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
+    println(rotate(3,ls))
+    println(rotate(-2,ls))
+  }
+  
+  // using P17 split and built-in reverse
+  def rotate(i: Int, list: List[Symbol]) = {
+      
+      def reverseFlat(xs: (List[Symbol],List[Symbol])) = xs._2 ::: xs._1
+      
+      if (i == 0) list
+      else if (i > 0) reverseFlat(P17Lists.splitRecursive(i, list))
+      else reverseFlat(P17Lists.splitRecursive(-i,list.reverse)).reverse
+  }
   
 }
